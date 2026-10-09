@@ -91,3 +91,5 @@ text.count("i")
 text.count("o")
 text.count("u")
 print("vowel from sentences are: ",count)
+
+#partition a string
