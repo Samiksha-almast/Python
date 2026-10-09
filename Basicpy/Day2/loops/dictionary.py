@@ -1,3 +1,4 @@
+#Dictionary
 students={
     101:{"Name":"Khushi","Scores":[70,67,95]},
     101:{"Name":"Sam","Scores":[79,97,89]},
