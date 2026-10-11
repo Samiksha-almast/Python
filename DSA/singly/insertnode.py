@@ -13,7 +13,7 @@ class LinkedList:
             self.head=new_node
         else:                                       #inserting from 2nd to last position
             p=1 
-            while(p!=pos-1 and temp.next!=None)     ##because new node should be added at last position
+            while(p!=pos-1 and temp.next!=None):     #because new node should be added at last position
                 temp=temp.next                      ##(temp!=None) #so tempt value wont be none at the end of the block
                 p+=1
             new_node.next = temp.next
