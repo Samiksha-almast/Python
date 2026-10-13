@@ -53,8 +53,6 @@ class LinkedList:
             temp.next = new_node
 
     # Find middle node
-    def reverse(self):          #reversing a linked list
-        self.head=prev
     def findmid_del(self):
         temp=temp1=self.head
         prev=None
@@ -63,7 +61,8 @@ class LinkedList:
             temp=temp.next
             temp1=temp1.next.next
         print("Middle node: ",temp.data)
-        prev.next=temp.next
+        if prev:
+            prev.next=temp.next
         temp=None
 
     # Delete node by value
@@ -90,9 +89,9 @@ class LinkedList:
                 temp=prev.next
 
     #concatenate two slls
-    def concatenate(self, head2):
+    def concatenate(self, list2):
         temp=self.head
-        while(temp.next):
+        while temp.next:
             temp=temp.next
         temp.next= list2.head
 
@@ -118,6 +117,7 @@ class LinkedList:
             print(temp.data, "+", temp.next.data, "=", total)
             temp = temp.next
 
+#create first list
 list = LinkedList()
 list.append(Node(10))
 list.append(Node(20))
@@ -125,21 +125,29 @@ list.append(Node(30))
 list.append(Node(40))
 list.append(Node(50))
 list.print()
+
+#create 2nd list
+list2 = LinkedList()
 list2.append(Node(60))
 list2.append(Node(70))
 list2.append(Node(80))
 list2.append(Node(90))
 list2.append(Node(94))
-print.list2()
-list.concatenate()
-print.list2()
+
+print("List1:")
+list.print()
+print("List2:")
+list2.print()
+list2.print()
+list.concatenate(list2)
 print("Original linked list:")
 list.print()
 print("\nInsert 100 at position 4:")
 list.insert(Node(100), 4)
 list.print()
 print("\nMiddle node:")
-list.temp()
+list.findmid_del()
+list.print()
 print("\nDelete node 30:")
 list.delete(30)
 list.print()

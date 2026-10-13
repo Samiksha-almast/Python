@@ -26,7 +26,7 @@ class LinkedList:
             print(temp.data)
             temp = temp.next
 
-list=LinkedList()
+list = LinkedList()
 list.append(Node(10))
 list.append(Node(20))
 list.append(Node(30))
