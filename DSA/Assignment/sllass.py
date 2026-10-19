@@ -1,4 +1,3 @@
-
 # Singly Linear Linked List
 
 class Node:
