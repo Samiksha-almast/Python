@@ -52,7 +52,19 @@ class DoublyLinkedList:
                 cnt+1
             temp=temp.next
         print("The occurance: ",cnt)
+    
+    def swap(self):
+        temp=node1=self.head #node1 is the first node
+        while temp.next: #temp is last node
+            temp=temp.next
 
+        #node1.next=temp.next
+        temp.next=node1.next
+        node1.next=None
+        node1.prev=temp.prev
+        temp.prev.next=node1
+        temp.prev=None
+        self.head=temp
 
 # Main program
 ll = DoublyLinkedList()
@@ -68,6 +80,9 @@ ll.display()
 ll.delete(10)
 
 ll.count_occ(20)
+
+ll.swap()
+ll.display()
 
 print("After deletion:")
 ll.display()
