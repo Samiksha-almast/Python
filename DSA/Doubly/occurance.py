@@ -44,18 +44,30 @@ class DoublyLinkedList:
             temp = temp.next
         print("None")
 
+    def count_occ(self,num):
+        temp=self.head
+        cnt=0
+        while temp:
+            if temp.data==num:
+                cnt+1
+            temp=temp.next
+        print("The occurance: ",cnt)
+
+
 # Main program
 ll = DoublyLinkedList()
 
 ll.append(10)
 ll.append(20)
-ll.append(30)
+ll.append(20)
 ll.append(40)
 
 print("Before deletion:")
 ll.display()
 
 ll.delete(10)
+
+ll.count_occ(20)
 
 print("After deletion:")
 ll.display()
