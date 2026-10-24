@@ -33,7 +33,24 @@ class stack:
         while temp:
             st1.push(Node(temp.data))
             temp=temp.next
-    def compare(self,)
+    def compare(self, other):
+        temp1 = self.top
+        temp2 = other.top
+
+    while temp1 and temp2:
+        if temp1.data != temp2.data:
+            return False
+        temp1 = temp1.next
+        temp2 = temp2.next
+
+    return temp1 is None and temp2 is None
+    st.reverse()
+    st1.print()
+
+    if st.compare(st1):
+        print("Both stacks are equal")
+    else:
+        print("Both stacks are not equal")
 
 st=stack()
 st1=stack()
@@ -45,5 +62,7 @@ st.push(Node(50))
 st.print()
 st.pop()
 st.print()
+st.reverse()
+st1.print()
 st.reverse()
 st1.print()
